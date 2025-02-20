@@ -15,6 +15,11 @@ resource "aws_iam_policy" "example" {
         Action = "s3:GetObject"
         Resource = "*"
       }
+      {
+        Effect = "Allow"
+        Action = "s3:GetObject"
+        Resource = "*"
+      }
     
       
     ]
