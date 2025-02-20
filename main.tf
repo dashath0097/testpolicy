@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_iam_policy" "example" {
-  name        = "example-policy"
+  name        = "testpromt3"
   description = "Example policy"
 
   policy = jsonencode({
