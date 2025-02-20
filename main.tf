@@ -18,7 +18,7 @@ resource "aws_iam_policy" "example" {
         Effect = "Allow"
         Action = "s3:GetObject"
         Resource = "*"
-      
+      }
     ]
   })
 }
