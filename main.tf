@@ -3,25 +3,22 @@ provider "aws" {
 }
 
 resource "aws_iam_policy" "example" {
-  name        = "testpromt3"
+  name        = "example-policy"
   description = "Example policy"
 
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
-    
+      {
+        Effect = "Allow"
+        Action = "s3:ListBuckets"
+        Resource = "*"
+      },
       {
         Effect = "Allow"
         Action = "s3:GetObject"
         Resource = "*"
       }
-      {
-        Effect = "Allow"
-        Action = "s3:GetObject"
-        Resource = "*"
-      }
-    
-      
     ]
   })
 }
